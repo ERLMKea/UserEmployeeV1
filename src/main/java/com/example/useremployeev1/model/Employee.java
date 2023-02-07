@@ -17,6 +17,12 @@ public class Employee {
     private boolean vegetarian;
 
 
+    public boolean isValidEmail() {
+        if (this.user == null) return false;
+        String[] arr = this.user.getEmail().split("@");
+        return arr[0].equals(this.getName());
+    }
+
     @OneToOne
     @JoinColumn(name = "userid", referencedColumnName = "userID")
     private User user;
