@@ -20,7 +20,7 @@ class UserTest {
 
     @Test
     void testvalidemail() {
-        var obj = employeeRepository.findByName("erik").orElse(null);
+        //var obj = employeeRepository.findByName("erik").orElse(null);
         assertEquals(true, employeeRepository.findByName("erik").orElse(new Employee()).isValidEmail());
     }
 
